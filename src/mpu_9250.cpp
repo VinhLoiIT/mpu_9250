@@ -91,7 +91,7 @@ int main(int argc, char **argv)
                 angle_msg.data =(float)(imu_data.fusionPose.z() * RTMATH_RAD_TO_DEGREE+180.0);
                 displayTimer = now;
             }
-            if ((now - rateTimer) > 1000000) {
+            if ((now - rateTimer) > 100000) {
                 sampleRate = sampleCount;
                 sampleCount = 0;
                 rateTimer = now;
